@@ -142,3 +142,10 @@ command Kernelmode set tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
 
 "Gitgutter
 let g:gitgutter_diff_args = '-w'
+
+" EasyMotion
+let g:EasyMotion_do_mapping = 0
+nmap <C-g> <Plug>(easymotion-overwin-f2)
+let g:EasyMotion_smartcase = 1
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
