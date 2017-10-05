@@ -17,7 +17,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'easymotion/vim-easymotion'
-Plugin 'vim-multiple-cursors'
+Plugin 'terryma/vim-multiple-cursors'
 
 call vundle#end()
 filetype plugin indent on
