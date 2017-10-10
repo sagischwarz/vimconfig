@@ -82,10 +82,10 @@ let g:airline#extensions#tabline#enabled = 1 "Show airline for tabs too
 set laststatus=2 "Always dispay airline status bar
 
 "Key bindings
-map <F12> :1,$ ! xml fo<cr>  
-map <F11> :%s/\r\(\n\)/\1/g<cr>
-map <F10> :%s/\n//g<cr>
-map <C-n> :NERDTreeToggle<cr>
+nmap <F12> :%!jq '.'<cr>
+nmap <F11> :%s/\r\(\n\)/\1/g<cr>
+nmap <F10> :%s/\n//g<cr>
+nmap <C-w> :NERDTreeToggle<cr>
 
 "HTML settings
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
@@ -148,5 +148,5 @@ let g:gitgutter_diff_args = '-w'
 let g:EasyMotion_do_mapping = 0
 nmap <C-g> <Plug>(easymotion-overwin-f2)
 let g:EasyMotion_smartcase = 1
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
+nmap <Leader>j <Plug>(easymotion-j)
+nmap <Leader>k <Plug>(easymotion-k)
