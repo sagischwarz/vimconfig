@@ -60,6 +60,9 @@ set autoindent
 set showcmd "Show commands in status line
 set mouse=a "Enable mouse in terminal
 set shell=zsh
+set wildmenu
+set scrolloff=3
+set autoread
 syntax on
 
 "Tab settings
@@ -150,3 +153,8 @@ nmap <C-g> <Plug>(easymotion-overwin-f2)
 let g:EasyMotion_smartcase = 1
 nmap <Leader>j <Plug>(easymotion-j)
 nmap <Leader>k <Plug>(easymotion-k)
+
+" Matchit
+if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
+  runtime! macros/matchit.vim
+endif
