@@ -18,6 +18,8 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'joshdick/onedark.vim'
+Plugin 'sheerun/vim-polyglot'
 
 call vundle#end()
 filetype plugin indent on
@@ -45,8 +47,13 @@ elseif has("unix")
     set clipboard=unnamedplus
 endif
 
+" Enable true colors
+if (has("termguicolors"))
+  set termguicolors
+endif
+
 "Color scheme settings
-colo molokai
+colorscheme onedark
 
 "General settings
 set number
