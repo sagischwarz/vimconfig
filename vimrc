@@ -88,6 +88,9 @@ set nowritebackup
 set ic
 set incsearch "Incremental search
 
+"Change working directory to current file
+autocmd BufEnter * silent! lcd %:p:h
+
 "Airline settings
 let g:airline_detect_paste=1 "Show PASTE if in paste mode
 let g:airline#extensions#tabline#enabled = 1 "Show airline for tabs too
