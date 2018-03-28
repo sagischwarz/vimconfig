@@ -73,6 +73,7 @@ set wildmenu
 set scrolloff=3
 set autoread
 syntax on
+set synmaxcol=250
 
 "Tab settings
 set tabstop=4
