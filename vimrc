@@ -163,7 +163,7 @@ let g:gitgutter_diff_args = '-w'
 
 " EasyMotion
 let g:EasyMotion_do_mapping = 0
-nmap <C-g> <Plug>(easymotion-overwin-f2)
+nmap s <Plug>(easymotion-overwin-f2)
 let g:EasyMotion_smartcase = 1
 nmap <Leader>j <Plug>(easymotion-j)
 nmap <Leader>k <Plug>(easymotion-k)
