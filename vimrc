@@ -75,6 +75,8 @@ set scrolloff=3
 set autoread
 syntax on
 set synmaxcol=250
+set undofile
+set undodir=~/.cache/vimundo
 
 "Tab settings
 set tabstop=4
