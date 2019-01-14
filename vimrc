@@ -23,6 +23,7 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'junegunn/goyo.vim'
 Plugin 'junegunn/limelight.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'luochen1990/rainbow'
 
 call vundle#end()
 filetype plugin indent on
@@ -179,3 +180,6 @@ endif
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 let g:goyo_width = 120
+
+" Rainbow
+let g:rainbow_active = 1
