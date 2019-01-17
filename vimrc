@@ -86,6 +86,8 @@ syntax on
 set synmaxcol=250
 set undofile
 set undodir=~/.cache/vimundo
+set splitbelow
+set splitright
 
 "Tab settings
 set tabstop=4
@@ -114,7 +116,7 @@ set laststatus=2 "Always dispay airline status bar
 nmap <F12> :%!jq '.'<cr>
 nmap <F11> :%s/\r\(\n\)/\1/g<cr>
 nmap <F10> :%s/\n//g<cr>
-nmap <C-w> :NERDTreeToggle<cr>
+nmap <Leader>n :NERDTreeToggle<cr>
 
 "HTML settings
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
