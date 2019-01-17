@@ -116,7 +116,7 @@ set laststatus=2 "Always dispay airline status bar
 nmap <F12> :%!jq '.'<cr>
 nmap <F11> :%s/\r\(\n\)/\1/g<cr>
 nmap <F10> :%s/\n//g<cr>
-nmap <Leader>n :NERDTreeToggle<cr>
+nmap <Leader>n :NERDTreeFocus<cr>
 
 "HTML settings
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
@@ -154,7 +154,9 @@ function! Find_git_root()
   return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
 endfunction
 
+command! -nargs=0 Agw execute "Ack! <cword> " . Find_git_root()
 command! -nargs=1 Ag execute "Ack! <args> " . Find_git_root()
+nmap <Leader>s :Agw<CR>
 
 "Markdown
 let g:vim_markdown_folding_disabled=0
@@ -165,7 +167,6 @@ let g:ycm_show_diagnostics_ui = 0
 
 "Nerdtree settings
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-let NERDTreeQuitOnOpen=1
 
 "Kernel mode
 command Kernelmode set tabstop=8 softtabstop=8 shiftwidth=8 noexpandtab
