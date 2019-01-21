@@ -32,6 +32,7 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-sleuth'
 Plugin 'Chiel92/vim-autoformat'
+Plugin 'alvan/vim-closetag'
 
 call vundle#end()
 filetype plugin indent on
@@ -49,10 +50,8 @@ if has("win32")
     " can be called correctly.
     set shellslash
 
-    au Filetype html,xml,xsl source C:\Program Files (x86)\Vim\vimfiles\scripts\closetag.vim
     set clipboard=unnamed
 elseif has("unix")
-    au Filetype html,xml,xsl source ~/.vim/scripts/closetag.vim
     if has("gui_running")
         set lines=35 columns=110
     endif
@@ -124,7 +123,6 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 "Filetype aliases
 au BufNewFile,BufRead *.ino set filetype=c
 au BufNewFile,BufRead *.asm set filetype=nasm
-au BufNewFile,BufRead *.scala set syntax=scala
 
 augroup BgHighlight
     autocmd!
