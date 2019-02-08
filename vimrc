@@ -195,3 +195,5 @@ let g:rainbow_active = 1
 "ale
 let g:ale_sign_column_always = 1
 let g:ale_nasm_nasm_options = '-f elf'
+let b:ale_fixers = {'python': ['autopep8'], 'terraform': ['terraform']}
+let g:ale_python_pylint_options = '-E'
