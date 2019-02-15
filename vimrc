@@ -53,7 +53,7 @@ if has("win32")
     set clipboard=unnamed
 elseif has("unix")
     if has("gui_running")
-        set lines=35 columns=110
+        set lines=35 columns=130
     endif
     set clipboard=unnamedplus
 endif
