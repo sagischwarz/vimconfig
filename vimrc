@@ -140,17 +140,18 @@ let Tex_FoldedSections=""
 let Tex_FoldedEnvironments=""
 let Tex_FoldedMisc=""
 
+function! Find_git_root()
+  return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
+endfunction
+
 "fzf
-nmap <C-p> :Files<CR>
+command! ProjectFiles execute 'Files' Find_git_root()
+nmap <C-p> :ProjectFiles<CR>
 nmap <Leader>t :Tags<CR>
 nmap ; :Buffers<CR>
 
 "ack.vim
 let g:ackprg = 'ag --vimgrep'
-
-function! Find_git_root()
-  return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
-endfunction
 
 command! -nargs=0 Agw execute "Ack! <cword> " . Find_git_root()
 command! -nargs=1 Ag execute "Ack! <args> " . Find_git_root()
