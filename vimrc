@@ -33,6 +33,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-sleuth'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'alvan/vim-closetag'
+Plugin 'airblade/vim-rooter'
 
 call vundle#end()
 filetype plugin indent on
@@ -140,22 +141,16 @@ let Tex_FoldedSections=""
 let Tex_FoldedEnvironments=""
 let Tex_FoldedMisc=""
 
-function! Find_git_root()
-  return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
-endfunction
-
 "fzf
-command! ProjectFiles execute 'Files' Find_git_root()
-nmap <C-p> :ProjectFiles<CR>
+nmap <C-p> :Files<CR>
 nmap <Leader>t :Tags<CR>
 nmap ; :Buffers<CR>
 
 "ack.vim
 let g:ackprg = 'ag --vimgrep'
-
-command! -nargs=0 Agw execute "Ack! <cword> " . Find_git_root()
-command! -nargs=1 Ag execute "Ack! <args> " . Find_git_root()
-nmap <Leader>s :Agw<CR>
+cnoreabbrev Ack Ack!
+nnoremap <Leader>s :Ack! <cword><CR>
+nnoremap <Leader>a :Ack!<Space>
 
 "Markdown
 let g:vim_markdown_folding_disabled=0
@@ -198,3 +193,7 @@ let g:ale_sign_column_always = 1
 let g:ale_nasm_nasm_options = '-f elf'
 let b:ale_fixers = {'python': ['autopep8'], 'terraform': ['terraform']}
 let g:ale_python_pylint_options = '-E'
+
+"vim-rooter
+let g:rooter_change_directory_for_non_project_files = 'current'
+let g:rooter_silent_chdir = 1
