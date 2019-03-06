@@ -15,7 +15,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'jiangmiao/auto-pairs'
+"Plugin 'jiangmiao/auto-pairs'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'joshdick/onedark.vim'
@@ -34,6 +34,7 @@ Plugin 'tpope/vim-sleuth'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'alvan/vim-closetag'
 Plugin 'airblade/vim-rooter'
+Plugin 'wlangstroth/vim-racket'
 
 call vundle#end()
 filetype plugin indent on
