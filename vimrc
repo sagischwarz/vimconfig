@@ -36,6 +36,7 @@ Plugin 'alvan/vim-closetag'
 Plugin 'airblade/vim-rooter'
 Plugin 'wlangstroth/vim-racket'
 Plugin 'lervag/vimtex'
+Plugin 'juliosueiras/vim-terraform-completion'
 
 call vundle#end()
 filetype plugin indent on
@@ -200,3 +201,11 @@ let g:ale_python_pylint_options = '-E'
 "vim-rooter
 let g:rooter_change_directory_for_non_project_files = 'current'
 let g:rooter_silent_chdir = 1
+
+"vim-polyglot
+let g:polyglot_disabled = ['latex']
+
+"omnicompletion
+set omnifunc=syntaxcomplete#Complete
+set completeopt=longest,menuone
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
