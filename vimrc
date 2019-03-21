@@ -35,6 +35,7 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'alvan/vim-closetag'
 Plugin 'airblade/vim-rooter'
 Plugin 'wlangstroth/vim-racket'
+Plugin 'lervag/vimtex'
 
 call vundle#end()
 filetype plugin indent on
